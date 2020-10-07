@@ -1,4 +1,4 @@
-FROM hotio/sonarr:phantom
+FROM hotio/sonarr:nightly
 LABEL maintainer=825813+sabrsorensen@users.noreply.github.com
 
 ARG BUILD_DATE
@@ -12,9 +12,9 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 # Install sickbeard_mp4_automator package dependencies
 RUN apt-get update && \
     apt-get install --yes \
-        ffmpeg \
-        git \
-        python3-pip && \
+    ffmpeg \
+    git \
+    python3-pip && \
     apt-get clean && \
     ln /usr/bin/pip3 /usr/bin/pip && \
     pip install --no-cache-dir --upgrade pip
