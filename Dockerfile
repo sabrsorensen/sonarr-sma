@@ -16,7 +16,6 @@ RUN apt-get update && \
     git \
     python3-pip && \
     apt-get clean && \
-    ln /usr/bin/pip3 /usr/bin/pip && \
     pip install --no-cache-dir --upgrade pip
 
 # clone sickbeard_mp4_automator and install Python module dependencies
