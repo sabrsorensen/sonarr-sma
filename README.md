@@ -1,4 +1,4 @@
-# sonarr-phantom-sma
+# sonarr-sma
 
 ![Image OS](https://img.shields.io/badge/Image_OS-Ubuntu-orange)
 [![Base Image](https://img.shields.io/badge/Base_Image-hotio/sonarr:phantom-orange)](https://ghcr.io/hotio/sonarr)
@@ -18,7 +18,7 @@ docker run --rm --name sonarr \
     -v /docker/host/configs/sickbeard_mp4_automator/config:/opt/sma/config \
     -v /docker/host/configs/sickbeard_mp4_automator/post_process:/opt/sma/post_process \
     -v /docker/host/media:/data \
-    ghcr.io/sabrsorensen/sonarr-phantom-sma
+    ghcr.io/sabrsorensen/sonarr-sma
 ```
 
 From [hotio/sonarr's documentation](https://github.com/hotio/docker-sonarr/blob/master/README.md#starting-the-container):
@@ -38,7 +38,7 @@ The environment variables below are all optional, the values you see are the def
 ```yaml
 sonarr:
   ...
-  image: ghcr.io/sabrsorensen/sonarr-phantom-sma
+  image: ghcr.io/sabrsorensen/sonarr-sma
   container_name: sonarr
   environment:
     - PUID=1000
