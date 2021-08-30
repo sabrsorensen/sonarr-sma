@@ -1,4 +1,4 @@
-FROM hotio/sonarr:release
+FROM ghcr.io/hotio/sonarr:release
 LABEL maintainer=825813+sabrsorensen@users.noreply.github.com
 
 ARG BUILD_DATE
