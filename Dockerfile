@@ -12,7 +12,7 @@ LABEL maintainer=${COMMIT_AUTHOR} \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${VCS_REF} \
     org.opencontainers.image.source=${VCS_URL} \
-    org.opencontainers.image.base.digest=${BASE_REF} \
+    base_image_revision=${BASE_REF} \
     sma_revision=${SMA_REF}
 
 # Install sickbeard_mp4_automator package dependencies
