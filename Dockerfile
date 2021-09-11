@@ -2,12 +2,18 @@ FROM ghcr.io/hotio/sonarr:release
 LABEL maintainer=825813+sabrsorensen@users.noreply.github.com
 
 ARG BUILD_DATE
+ARG COMMIT_AUTHOR
 ARG VCS_REF
 ARG VCS_URL
+ARG SMA_REF
+ARG BASE_REF
 
-LABEL org.label-schema.build-date=$BUILD_DATE \
-    org.label-schema.vcs-ref=$VCS_REF \
-    org.label-schema.vcs-url=${VCS_URL}
+LABEL maintainer=${COMMIT_AUTHOR} \
+    org.opencontainers.image.created=${BUILD_DATE} \
+    org.opencontainers.image.revision=${VCS_REF} \
+    org.opencontainers.image.source=${VCS_URL} \
+    org.opencontainers.image.base.digest=${BASE_REF} \
+    sma_revision=${SMA_REF}
 
 # Install sickbeard_mp4_automator package dependencies
 RUN apt-get update && \
