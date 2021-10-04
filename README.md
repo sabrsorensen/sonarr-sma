@@ -1,7 +1,7 @@
 # sonarr-sma
 
-![Image OS](https://img.shields.io/badge/Image_OS-Ubuntu-orange)
-[![Base Image](https://img.shields.io/badge/Base_Image-hotio/sonarr:phantom-orange)](https://ghcr.io/hotio/sonarr)
+![Image OS](https://img.shields.io/badge/Image_OS-Alpine-blue)
+[![Base Image](https://img.shields.io/badge/Base_Image-hotio/sonarr:release-blue)](https://ghcr.io/hotio/sonarr)
 
 ## Upstreams
 
