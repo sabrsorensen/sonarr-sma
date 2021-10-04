@@ -16,12 +16,19 @@ LABEL maintainer=${COMMIT_AUTHOR} \
     sma_revision=${SMA_REF}
 
 # Install sickbeard_mp4_automator package dependencies
-RUN apk add -U --no-cache \
+RUN apk -U upgrade --no-cache && \
+    apk -U add --no-cache \
     ffmpeg \
+    gcc \
     git \
-    python3 \
+    libffi \
+    libffi-dev \
+    musl-dev \
+    openssl-dev \
+    python3-dev \
     py3-pip && \
-    pip install --no-cache-dir --upgrade pip
+    pip install --no-cache-dir --upgrade pip && \
+    ln /usr/bin/python3 /usr/bin/python
 
 # clone sickbeard_mp4_automator and install Python module dependencies
 RUN git clone --depth 1 --single-branch git://github.com/mdhiggins/sickbeard_mp4_automator /opt/sma
