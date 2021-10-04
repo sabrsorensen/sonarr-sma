@@ -5,7 +5,7 @@ baseimage="ghcr.io/hotio/sonarr:release"
 docker pull ghcr.io/$GITHUB_REPOSITORY
 docker pull $baseimage
 
-image_baseimage=`docker inspect ghcr.io/$GITHUB_REPOSITORY --format '{{ index .Config.Labels "org.opencontainers.image.base.digest"}}'`
+image_baseimage=`docker inspect ghcr.io/$GITHUB_REPOSITORY --format '{{ index .Config.Labels "base_image_revision"}}'`
 image_sma_ref=`docker inspect ghcr.io/$GITHUB_REPOSITORY --format '{{ index .Config.Labels "sma_revision"}}'`
 
 current_baseimage_ref=`docker inspect $baseimage --format '{{ index .Config.Labels "org.opencontainers.image.revision"}}'`
